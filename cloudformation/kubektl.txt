@@ -1,0 +1,2 @@
+1003  kubectl describe deployment hello-k8s
+ 1004  kubectl get services hello-k8s -o wide
