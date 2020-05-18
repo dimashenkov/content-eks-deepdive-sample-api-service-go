@@ -6,7 +6,8 @@ eksctl create cluster --region=us-east-1 --node-type=t2.small
 3. ./patch-aws-auth.sh
 
 4. run codepipeline.yaml from cloudformation GUI in AWS
-
+- insert params like
+  github username, github token, cluster name
 5. check web
 
 To view the status of the Kubernetes deployment:
