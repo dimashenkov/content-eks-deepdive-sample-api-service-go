@@ -1,0 +1,21 @@
+1.create eks cluster
+eksctl create cluster --region=us-east-1 --node-type=t2.small
+
+2. ./create-iam-role.sh
+
+3. ./patch-aws-auth.sh
+
+4. run codepipeline.yaml from cloudformation GUI in AWS
+
+5. check web
+
+To view the status of the Kubernetes deployment:
+
+kubectl describe deployment hello-k8s
+For the status of the service, run the following command:
+
+kubectl describe service hello-k8s
+Once the service is built and delivered, we can run the following command to get the Elastic Load Balancer (ELB) endpoint and open it in a browser. If the message is not updated immediately, give Kubernetes some time to deploy the change.
+
+kubectl get services hello-k8s -o wide
+This service was configured with a LoadBalancer so, an AWS Elastic Load Balancer is launched by EKS for the service. The EXTERNAL-IP column contains a value that ends with elb.amazonaws.com - the full value is the DNS address
