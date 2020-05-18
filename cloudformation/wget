@@ -1,0 +1,11 @@
+--2020-05-18 14:59:14--  https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.112.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4445 (4.3K) [text/plain]
+Saving to: ‘cluster-autoscaler-autodiscover.yaml’
+
+     0K ....                                                  100% 18.0M=0s
+
+2020-05-18 14:59:15 (18.0 MB/s) - ‘cluster-autoscaler-autodiscover.yaml’ saved [4445/4445]
+

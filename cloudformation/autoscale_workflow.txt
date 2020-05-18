@@ -1,0 +1,24 @@
+Learning Objectives:
+Modify the min/max sizes of the Autoscaling group.
+Navigate to the AWS Management Console
+Under EC2, find Autoscaling Groups
+Select the autoscaling group already created
+1. Under Actions > Edit, change min=2 and max=8
+Click Save
+Configure the Cluster Autoscaler.
+2.Edit cluster_autoscaler.yaml, replacing <AUTOSCALING GROUP NAME> with the autoscaling group name you found in the console.
+
+Apply the IAM policy to the worker node group role.
+3.Copy the content of asg-policy.json
+Navigate to IAM and find the role corresponding to the EC2 worker node group ,surch word node!!!!
+Add an inline policy
+Paste the content of asg-policy.json
+Save
+Deploy the Cluster Autoscaler.
+4.Run the following command: kubectl apply -f cluster_autoscaler.yaml
+
+5.Deploy and scale out the nginx deployment.
+Run the following commands:
+
+kubectl apply -f nginx.yaml
+kubectl scale --replicas=10 deployment/nginx-scaleout
