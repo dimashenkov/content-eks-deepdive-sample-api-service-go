@@ -15,7 +15,7 @@ kind: Deployment
 metadata:
   name: hello-k8s
 spec:
-  replicas: 10
+  replicas: 40
   strategy:
     type: RollingUpdate
     rollingUpdate:
